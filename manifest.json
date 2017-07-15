@@ -11,9 +11,19 @@
   },
    "background":{
      "scripts":["jquery-3.2.1.min.js"]
+   },
+   "content_scripts": [
+   {
+     "matches": ["https://www.google.com/*", "https://www.google.ca/*"],
+
+     "js": ["jquery-3.2.1.min.js", "popup.js", "getTabHtml.js", "getTabHtmlScript.js"]
    }
+ ],
   "permissions": [
     "tabs",
+    "activeTab",
+    "https://*/*",
+    "http://*/*",
     "https://ajax.googleapis.com/"
   ]
 }
