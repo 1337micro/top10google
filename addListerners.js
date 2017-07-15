@@ -7,5 +7,5 @@ chrome.runtime.onMessage.addListener(function(message){
 });
 
 function launchUri(uri){
-  chrome.tabs.create({url:uri})
+  chrome.tabs.create({url:uri, selected:false})
 }

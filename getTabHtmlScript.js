@@ -11,7 +11,7 @@ while (contentOfHtml.search(prefix) != -1){
     contentOfHtml = contentOfHtml.substring(indexOfStartingQuote+1, contentOfHtml.length);
 
   }
-
+//arrayOfUri = arrayOfUri.reverse();
 arrayOfUri.forEach( function(uri){
   chrome.runtime.sendMessage(uri)
 });
