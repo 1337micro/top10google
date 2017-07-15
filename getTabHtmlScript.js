@@ -12,4 +12,6 @@ while (contentOfHtml.search(prefix) != -1){
 
   }
 
-arrayOfUri.forEach( (uri) => chrome.runtime.sendMessage(uri));
+arrayOfUri.forEach( function(uri){
+  chrome.runtime.sendMessage(uri)
+});
