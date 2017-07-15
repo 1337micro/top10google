@@ -6,7 +6,7 @@ while (contentOfHtml.search(prefix) != -1){
   let index = contentOfHtml.search(prefix);
   let indexOfStartingQuote = index+prefix.length;
   arrayOfUri.push(contentOfHtml.slice(indexOfStartingQuote+1,
-    contentOfHtml.substring(indexOfStartingQuote+1, contentOfHtml.length).search('"') + indexOfStartingQuote));
+    contentOfHtml.substring(indexOfStartingQuote+1, contentOfHtml.length).search('"') + indexOfStartingQuote + 1));
 
     contentOfHtml = contentOfHtml.substring(indexOfStartingQuote+1, contentOfHtml.length);
 

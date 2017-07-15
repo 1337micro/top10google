@@ -1,6 +1,4 @@
 
-console.log("popupjs loaded");
-document.getElementById("submit_button").onclick = search;
 function search(){
  //chrome.tabs.create(object createProperties, function callback)
  console.log("popupjs loaded");
@@ -20,10 +18,3 @@ chrome.tabs.create({url:sSearchURI}); // main search results
 
 
 };
-chrome.runtime.onMessage.addListener(function(message){
-  launchUri(message);
-});
-
-function launchUri(uri){
-  chrome.tabs.create({url:uri})
-}
