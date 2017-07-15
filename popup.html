@@ -1,0 +1,37 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+
+  </head>
+  <body>
+    <div id="status">
+      <form action="popup.html">
+        <label for="search_box"> Search: </label>
+        <input id="search_box" type="text" />
+        <input id="submit_button" type="submit"/>
+      </form>
+    </div>
+  <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>
